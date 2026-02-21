@@ -3,8 +3,8 @@ html, body {
     margin: 0; 
     text-align: 
     center; 
-    background: #0f0f10;
-    color: #e9e9ea;
+    background: #C4D5BE;
+    color: #2a2d2b;
 }
 
 
@@ -31,6 +31,15 @@ form input, form textarea, form button {
   text-align: left;
 }
 
+.wrap form {
+  padding: 16px;
+  background: #dfe8d6;
+  border-radius: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 .links {
   margin-top: 12px;
   display: flex;
@@ -43,20 +52,20 @@ form input, form textarea, form button {
   display: inline-block;
   padding: 8px 12px;
   text-decoration: none;
-  color: #e9e9ea;
-  border: 1px solid #ddd;
+  color: #2a4d14;
+  border: 1px solid #c3d6c1;
   border-radius: 8px;
 }
 
 .links a:hover,
 .links a:focus-visible {
-  background: #1e1f22;
-  color: #e9e9ea;
+  background: #a3b18a;
+  color: #fff;
   border-color: #3a3d42;
   outline: none;
 }
 
-/* ==== Projects Page ====*/
+/* ==== Services Page ====*/
 .grid {
   display: grid;
   gap: 16px;
@@ -66,12 +75,14 @@ form input, form textarea, form button {
 }
 
 .card {
-  background: #15171a;
-  border: 1px solid #2b2d31;
+  background: #dcedc8;
+  border: 1px solid #c3d6c1;
+  color: #2a2d2b;
   border-radius: 12px;
   padding: 16px;
   min-height: 240px;
   transition: background 120ms, border-color 120ms, color 120ms;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
 }
 
 .card h3 { 
@@ -87,7 +98,7 @@ form input, form textarea, form button {
   font-size: 14px;
 }
 
-/* ==== Skills Page ==== */
+/* ==== About Page ==== */
 
 #skills .grid {
   display: grid;
@@ -128,6 +139,22 @@ form input, form textarea, form button {
   gap: 10px 12px;
 }
 
+/* ==== Contact Page ==== */
+ .form-row {
+  display:flex;
+  gap:20px;
+  flex-wrap: wrap;
+ }
+
+ .form-row p{
+  flex:1;
+  min-width: 200px;
+ }
+
+form p label {
+  display: block;
+  margin-bottom: 4px;
+}
 
 /* ==== Dark Mode ==== */
 a { 
@@ -144,16 +171,20 @@ nav a {
   padding: 8px 12px;
   margin-right: 8px;
   font-size: 18px;
-  color: #e9e9ea;
-  border: 1px solid transparent;
+  color: #1f3610;
+  border: 1px solid #a3b18a;
+  background: #c4d5be;
   border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
 nav a:hover,
 nav a:focus-visible {
-  background: #1e1f22;
-  border-color: #2b2d31;
+  background: #7b8e68;
+  border-color: #5e6b50;
+  color: #fff;
   outline: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
 }
 
 
@@ -163,29 +194,35 @@ input, textarea, button {
   box-sizing: border-box;
   margin: 8px 0;
   padding: 10px 12px;
-  color: #e9e9ea;
-  background: #15171a;
-  border: 1px solid #2b2d31;
+  color: #2a2d2b;
+  background: #e6f0e4;;
+  border: 1px solid #c3d6c1;
   border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
 }
 
 input::placeholder,
 textarea::placeholder { 
-    color: #9aa0a6; 
+    color: #7b8e68; 
 } 
 
 input:focus, textarea:focus, button:focus {
   outline: 2px solid #7aa2ff;
   outline-offset: 2px;
-  border-color: #3b82f6;
+  border-color: #7b8e68;
 }
 
 button { 
     cursor: pointer; 
-    background: #1e1f22; 
+    background: #a3b18a; 
+    color: #fff;
+    border: none;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
 button:hover { 
-    background: #2a2d32; 
+    background: #7b8e68;
+    transform: scale(1.03);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2); 
 }
 
