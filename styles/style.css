@@ -1,28 +1,31 @@
 /* ==== General ==== */
 html, body { 
-    margin: 0; 
-    text-align: 
-    center; 
-    background: #C4D5BE;
-    position: relative;
-    color: #2a2d2b;
+  margin: 0; 
+  text-align: 
+  center; 
+  background: #C4D5BE;
+  position: relative;
+  color: #2a2d2b;
 }
 
 nav { 
-    position: fixed; 
-    top: 8px; 
-    left: 8px; 
+  position: fixed; 
+  top: 8px; 
+  left: 8px; 
 }
 
 main { 
-    margin-top: 48px; 
+  position: relative;
+  z-index: 1;
+  margin-top: 48px; 
 }
 
+
 form input, form textarea, form button { 
-    width: 100%; 
-    margin-bottom: 16px;  
-    box-sizing: 
-    border-box; 
+  width: 100%; 
+  margin-bottom: 16px;  
+  box-sizing: 
+  border-box; 
 }
 
 .wrap {
@@ -115,11 +118,11 @@ body::before {
 }
 
 .card h3 { 
-    margin: 0 0 8px; 
+  margin: 0 0 8px; 
 }
 
 .card p  {
-    margin: 0 0 10px; 
+  margin: 0 0 10px; 
 }
 
 .card .tags {
@@ -233,8 +236,8 @@ input, textarea, button {
 
 input::placeholder,
 textarea::placeholder { 
-    color: #5e6b50;
-    font-style: italic; 
+  color: #5e6b50;
+  font-style: italic; 
 } 
 
 input:focus, textarea:focus, button:focus {
@@ -249,17 +252,17 @@ input:hover, textarea:hover {
 }
 
 button { 
-    cursor: pointer; 
-    background: #a3b18a; 
-    color: #fff;
-    border: none;
-    transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer; 
+  background: #a3b18a; 
+  color: #fff;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
 }
 
 button:hover { 
-    background: #7b8e68;
-    transform: scale(1.03);
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.2); 
+  background: #7b8e68;
+  transform: scale(1.03);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2); 
 }
 
 button:active {
