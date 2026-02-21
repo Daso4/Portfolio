@@ -20,52 +20,52 @@
                 <section>
                     <h2 style="text-align: center;">Send me a message!</h2>
 
-                    <form onsubmit="
-                        location.href =
-                        'mailto:dsoto6@sfsu.edu'
-                        + '?subject=' + encodeURIComponent('Portfolio Contact from ' + (this.name.value || 'Someone'))
-                        + '&body=' + encodeURIComponent(
-                        'Name: ' + (this.name.value || '') + '\n'
-                        + 'Email: ' + (this.email.value || '') + '\n\n'
-                    + (this.message.value || '')
-                );
-            return false;">
-
+                    <form id="contact-form">
                         <div class="form-row">
                             <p>
-                                <label for="name">Name</label><br>
+                                <label for="your-name">Your Name:</label><br>
                                 <input id="your-name" name="your-name" type="text" required
                                 placeholder="Your Name">
                             </p>
 
                             <p>
-                                <label for="name">Partners' Name:</label><br>
+                                <label for="partner-name">Partners' Name:</label><br>
                                 <input id="partner-name" name="partner-name" type="text" required
                                 placeholder="Partners' Name">
                             </p>
 
                         </div>
 
-                        <p>
-                            <label for="name">Due Date:</label><br>
-                            <input id="due-date" name="due-date" type="text" required
-                                placeholder="Estimated Due Date(or Baby's Age)">
+                        <div class="form-row">
+                            <p>
+                                <label for="due-date">Due Date:</label><br>
+                                <input id="due-date" name="due-date" type="text"
+                                    placeholder="Estimated Due Date(or Baby's Age)">
+                            </p>
+
+                            <p>
+                                <label for="your-contact">Your contact information:</label><br>
+                                <input id="your-contact" name="your-contact" type="text"
+                                    placeholder="JohnDoe@gmail.com or 111-222-3333">
                         </p>
+                        </div>
+
+                        
 
                         <p>
-                            <label for="email">What is your primary goal for postpartum support?</label><br>
+                            <label for="goal">What is your primary goal for postpartum support?</label><br>
                             <textarea id="goal" name="goal" rows="3" required
                                 placeholder="e.g: Rest/Sleep, Breastfeeding help, Sibling adjustment, Light housework"></textarea>
                         </p>
 
                         <p>
-                            <label for="message">How did you hear about Olive Branch Baby Care?</label><br>
+                            <label for="referral">How did you hear about Olive Branch Baby Care?</label><br>
                             <textarea id="referral" name="referral" rows="2" required
                                 placeholder="e.g: Friends/Family/Online/Social Media"></textarea>
                         </p>
 
                         <p>
-                            <label for="name">Is there anything specific on your mind today that I can help with?</label><br>
+                            <label for="extra">Is there anything specific on your mind today that I can help with?</label><br>
                             <textarea id="extra" name="extra" rows="2"
                                 placeholder=" Anything else to add?"></textarea>
                         </p>
@@ -85,5 +85,36 @@
         <footer>
             [Place holder text] © 2026
         </footer>
+
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const data = {
+                    name: document.getElementById('your-name').value,
+                    partnerName: document.getElementById('partner-name').value,
+                    dueDate: document.getElementById('due-date').value,
+                    contact: document.getElementById('your-contact').value,
+                    goal: document.getElementById('goal').value,
+                    referral: document.getElementById('referral').value,
+                    extra: document.getElementById('extra').value
+                };
+
+                try {
+                    const res = await fetch('https://portfolio-backend-a9du.onrender.com', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+                alert(result.message);
+                if (res.ok) e.target.reset();
+                } catch (err) {
+                    alert('Error sending email. Try again later.');
+                    console.error(err);
+                }
+            });
+        </script>
     </body>
 </html>
