@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Contact Me</title>
+        <title> Olive Branch Contact Information </title>
         <link rel="stylesheet" href="/styles/style.css">
     </head>
 
@@ -17,7 +17,7 @@
 
         <main>
             <div class="wrap">
-                <section>
+                <section class="reveal">
                     <h2 style="text-align: center;">Contact Me Here:</h2>
 
                     <form id="contact-form">
@@ -83,8 +83,29 @@
         </main>
 
         <footer>
-            [Place holder text] © 2026
+            © 2026 All Rights Reserved by Olive Branch Baby Care
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+
+                function revealOnScroll() {
+                    const reveals = document.querySelectorAll('.reveal');
+                    const windowHeight = window.innerHeight;
+
+                    reveals.forEach(el => {
+                        const elementTop = el.getBoundingClientRect().top;
+
+                        if (elementTop < windowHeight - 100) {
+                        el.classList.add('active');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', revealOnScroll);
+                revealOnScroll();
+            });
+        </script>
 
         <script>
             document.getElementById('contact-form').addEventListener('submit', async (e) => {

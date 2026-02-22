@@ -2,13 +2,14 @@
 <html lang="en">
 
     <head> 
-        <title>My Portfolio</title>
+        <title>Olive Branch Baby Care</title>
         <link rel="stylesheet" href="/styles/style.css">
     </head>
 
     <body>
         <header>
-            <h1>Welcome! </h1>
+            <h1> Olive Branch Baby Care </h1>
+            <p><strong> Confidence and calm for your first weeks home </strong></p>
             <nav>
                 <a href="/index.html">Home</a>
                 <a href="/services/">Services</a>
@@ -18,22 +19,96 @@
         </header>
 
         <main>
-            <div class="wrap">
+            <!-- <p>
+                Here at Olive Branch Baby Care we ensure that your early weeks of parenthood are supported, 
+                not overwhelming!
+            </p> -->
+                        
+            <div>
 
-                <section> 
-        
-                    <h2></h2>
+                <section class="reveal section-panel split"> 
+                    <div class="text-content">
+                        <h2> Let's Build Your Village! </h2>
 
-                    <p>
-                        [Place holder text]
-                    </p>
+                        <p>
+                            My mission at Olive Branch Baby Care is to extend a helping hand during one of life's most 
+                            profound transitions. I believe that the early weeks of parenthood shouldn't be defined by 
+                            stress, but by supported growth. My objective is to ensure your transition is as smooth as 
+                            possible by providing evidence-based information and hands-on care tailored to your family's 
+                            unique needs. Whether I am offering a listening ear for your birth story, troubleshooting newborn 
+                            sleep, or simply keeping your home running smoothly while you rest, I am there to bridge the gap 
+                            between 'surviving' and 'thriving.' I don't just care for your baby; I can offer collaborative 
+                            guidance that will support your parenting intuition.
+                        </p>
+                    </div>
+
+                    <div class="image-placeholder"></div>
+
+                </section>
+
+                <section class="reveal section-panel split reverse"> 
+                    <div class="text-content">
+                        <h2> About Me </h2>
+
+                        <p>
+                            With a background in Child Development from SJSU and a decade of experience in both formal 
+                            education and private childcare, I understand that the first few weeks of life are a sacred 
+                            time of discovery. My transition into postpartum care was born from a desire to support the most 
+                            intimate needs of a growing family. I'm here to offer the solutions, education, and peace of mind 
+                            you deserve.
+                        </p>
+
+                        <a href="/about/" class="cta-button">Learn More About Me</a>
+
+                    </div>
+
+                    <div class="image-placeholder"></div>
+
+                </section>
+
+                <section class="reveal section-panel split"> 
+                    <div class="text-content">
+                        <h2> [PLACEHOLDER] </h2>
+
+                        <p>
+                            [PLACEHOLDER]
+                        </p>
+
+                        <p>
+                            [PLACEHOLDER]
+                        </p>
+                    </div>
+
+                    <div class="image-placeholder"></div>
+
                 </section>
             </div>
         </main>
 
         <footer>
-            [Place holder text] © 2026
+            © 2026 All Rights Reserved by Olive Branch Baby Care
         </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+
+                function revealOnScroll() {
+                    const reveals = document.querySelectorAll('.reveal');
+                    const windowHeight = window.innerHeight;
+
+                    reveals.forEach(el => {
+                        const elementTop = el.getBoundingClientRect().top;
+
+                        if (elementTop < windowHeight - 100) {
+                        el.classList.add('active');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', revealOnScroll);
+                revealOnScroll();
+            });
+        </script>
 
     </body>
 
