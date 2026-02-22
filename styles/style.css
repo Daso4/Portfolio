@@ -6,6 +6,7 @@ body {
   background: #C4D5BE;
   position: relative;
   color: #2a2d2b;
+  overflow-x: hidden;
 }
 
 nav {
@@ -500,13 +501,27 @@ button:active {
   }
 
   .section-panel {
-    padding: 30px 20px;
     margin: 30px 16px;
+    padding: 30px 20px;
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .section-panel::before,
+  .section-panel::after {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    bottom: -40px;
+    left: -30px;
+    right: -30px;
   }
 
   nav {
     left: 0;
     right: 0;
+    top: 0;
+    width: 100%;
     text-align: center;
   }
 
@@ -521,18 +536,14 @@ button:active {
   }
 
   .split {
-    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
-  .section-panel {
-    padding: 50px 30px;
-    border-radius: 30px;
+  body::before {
+    left: -30px;
   }
 
-  body::before,
   body::after {
-    width: 220px;
-    height: 220px;
-    opacity: 0.08;
+    right: -30px;
   }
 }
