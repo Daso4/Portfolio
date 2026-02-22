@@ -1,128 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Olive Branch Contact Information </title>
-        <link rel="stylesheet" href="/styles/style.css">
-    </head>
 
-    <body>
-        <header>
-            <nav>
-                <a href="/index.html">Home</a>
-                <a href="/services/">Services</a>
-                <a href="/about/">About</a>
-                <a href="/contact/">Contact Me</a>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Olive Branch Contact Information </title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
 
-        <main>
-            <div class="wrap">
-                <section class="reveal">
-                    <h2 style="text-align: center;">Contact Me Here:</h2>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact Me</a>
+        </nav>
+    </header>
 
-                    <form id="contact-form">
-                        <div class="form-row">
-                            <p>
-                                <label for="your-name">Your Name:</label><br>
-                                <input id="your-name" name="your-name" type="text" required
-                                placeholder="Your Name">
-                            </p>
+    <main>
+        <div class="wrap">
+            <section class="reveal">
+                <h2 style="text-align: center;">Contact Me Here:</h2>
 
-                            <p>
-                                <label for="partner-name">Partners' Name:</label><br>
-                                <input id="partner-name" name="partner-name" type="text" required
+                <form id="contact-form">
+                    <div class="form-row">
+                        <p>
+                            <label for="your-name">Your Name:</label><br>
+                            <input id="your-name" name="your-name" type="text" required placeholder="Your Name">
+                        </p>
+
+                        <p>
+                            <label for="partner-name">Partners' Name:</label><br>
+                            <input id="partner-name" name="partner-name" type="text" required
                                 placeholder="Partners' Name">
-                            </p>
-
-                        </div>
-
-                        <div class="form-row">
-                            <p>
-                                <label for="due-date">Due Date:</label><br>
-                                <input id="due-date" name="due-date" type="text"
-                                    placeholder="Estimated Due Date(or Baby's Age)">
-                            </p>
-
-                            <p>
-                                <label for="your-contact">Your contact information:</label><br>
-                                <input id="your-contact" name="your-contact" type="text"
-                                    placeholder="JohnDoe@gmail.com or 111-222-3333">
                         </p>
-                        </div>
 
-                        
+                    </div>
 
+                    <div class="form-row">
                         <p>
-                            <label for="goal">What is your primary goal for postpartum support?</label><br>
-                            <textarea id="goal" name="goal" rows="3" required
-                                placeholder="e.g: Rest/Sleep, Breastfeeding help, Sibling adjustment, Light housework"></textarea>
+                            <label for="due-date">Due Date:</label><br>
+                            <input id="due-date" name="due-date" type="text"
+                                placeholder="Estimated Due Date(or Baby's Age)">
                         </p>
 
                         <p>
-                            <label for="referral">How did you hear about Olive Branch Baby Care?</label><br>
-                            <textarea id="referral" name="referral" rows="2" required
-                                placeholder="e.g: Friends/Family/Online/Social Media"></textarea>
+                            <label for="your-contact">Your contact information:</label><br>
+                            <input id="your-contact" name="your-contact" type="text"
+                                placeholder="JohnDoe@gmail.com or 111-222-3333">
                         </p>
+                    </div>
 
-                        <p>
-                            <label for="extra">Is there anything specific on your mind today that I can help with?</label><br>
-                            <textarea id="extra" name="extra" rows="2"
-                                placeholder=" Anything else to add?"></textarea>
-                        </p>
 
-                        <p><button type="submit">Send</button></p>
 
-                    </form>
-                </section>
+                    <p>
+                        <label for="goal">What is your primary goal for postpartum support?</label><br>
+                        <textarea id="goal" name="goal" rows="3" required
+                            placeholder="e.g: Rest/Sleep, Breastfeeding help, Sibling adjustment, Light housework"></textarea>
+                    </p>
 
-                <div class="links">
-                    <a href="" target="_blank" rel="noopener"> [Place holder text] </a>
-                    <a href="" target="_blank" rel="noopener"> [Place holder text] </a>
-                </div>
+                    <p>
+                        <label for="referral">How did you hear about Olive Branch Baby Care?</label><br>
+                        <textarea id="referral" name="referral" rows="2" required
+                            placeholder="e.g: Friends/Family/Online/Social Media"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="extra">Is there anything specific on your mind today that I can help
+                            with?</label><br>
+                        <textarea id="extra" name="extra" rows="2" placeholder=" Anything else to add?"></textarea>
+                    </p>
+
+                    <p><button type="submit">Send</button></p>
+
+                </form>
+            </section>
+
+            <div class="links">
+                <a href="" target="_blank" rel="noopener"> [Place holder text] </a>
+                <a href="" target="_blank" rel="noopener"> [Place holder text] </a>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            © 2026 All Rights Reserved by Olive Branch Baby Care
-        </footer>
+    <footer>
+        © 2026 All Rights Reserved by Olive Branch Baby Care
+    </footer>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-                function revealOnScroll() {
-                    const reveals = document.querySelectorAll('.reveal');
-                    const windowHeight = window.innerHeight;
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal');
+                const windowHeight = window.innerHeight;
 
-                    reveals.forEach(el => {
-                        const elementTop = el.getBoundingClientRect().top;
+                reveals.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
 
-                        if (elementTop < windowHeight - 100) {
+                    if (elementTop < windowHeight - 100) {
                         el.classList.add('active');
-                        }
-                    });
-                }
+                    }
+                });
+            }
 
-                window.addEventListener('scroll', revealOnScroll);
-                revealOnScroll();
-            });
-        </script>
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
 
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', async (e) => {
-                e.preventDefault();
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
 
-                const data = {
-                    name: document.getElementById('your-name').value,
-                    partnerName: document.getElementById('partner-name').value,
-                    dueDate: document.getElementById('due-date').value,
-                    contact: document.getElementById('your-contact').value,
-                    goal: document.getElementById('goal').value,
-                    referral: document.getElementById('referral').value,
-                    extra: document.getElementById('extra').value
-                };
+            const data = {
+                name: document.getElementById('your-name').value,
+                partnerName: document.getElementById('partner-name').value,
+                dueDate: document.getElementById('due-date').value,
+                contact: document.getElementById('your-contact').value,
+                goal: document.getElementById('goal').value,
+                referral: document.getElementById('referral').value,
+                extra: document.getElementById('extra').value
+            };
 
-                try {
-                    const res = await fetch('https://portfolio-backend-a9du.onrender.com/send', {
+            try {
+                const res = await fetch('https://portfolio-backend-a9du.onrender.com/send', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
@@ -131,11 +133,12 @@
                 const result = await res.json();
                 alert(result.message);
                 if (res.ok) e.target.reset();
-                } catch (err) {
-                    alert('Error sending email. Try again later.');
-                    console.error(err);
-                }
-            });
-        </script>
-    </body>
+            } catch (err) {
+                alert('Error sending email. Try again later.');
+                console.error(err);
+            }
+        });
+    </script>
+</body>
+
 </html>

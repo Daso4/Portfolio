@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Olive Branch About </title>
-        <link rel="stylesheet" href="/styles/style.css">
 
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Olive Branch About </title>
+    <link rel="stylesheet" href="/styles/style.css">
 
-    <body>
-        <header>
-            <nav>
-                <a href="/index.html">Home</a>
-                <a href="/services/">Services</a>
-                <a href="/about/">About</a>
-                <a href="/contact/">Contact Me</a>
-            </nav>
-        </header>
+</head>
 
-        <main>
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/services/">Services</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact Me</a>
+        </nav>
+    </header>
 
+    <main>
+
+        <div class="wrap">
             <h2 style="text-align: center; ">Learn a little about me</h2>
 
-            <section class="reveal section-panel split"> 
-                    <div class="text-content">
-                        <!-- <h2> [PLACEHOLDER] </h2> -->
+            <section class="reveal section-panel split">
+                <div class="text-content">
+                    <!-- <h2> [PLACEHOLDER] </h2> -->
 
-                        <p>
-                             Hi, I'm Albina Soto. My journey into postpartum care began at San Jose State University, 
-                             where I studied Child Development. For the past decade, I've dedicated my career to the 
-                             "under-five" journey-spending years in both formal educational settings and providing 
-                             personalized childcare. I've seen firsthand the magic of a child's discovery, but I've also 
-                             seen how much parents need a "village" of their own.
+                    <p>
+                        Hi, I'm Albina Soto. My journey into postpartum care began at San Jose State University,
+                        where I studied Child Development. For the past decade, I've dedicated my career to the
+                        "under-five" journey-spending years in both formal educational settings and providing
+                        personalized childcare. I've seen firsthand the magic of a child's discovery, but I've also
+                        seen how much parents need a "village" of their own.
 
-                            While my years as a nanny have been dedicated to nurturing the individual needs of children, 
-                            my transition into postpartum care has a new, vital objective. At Olive Branch Baby Care, I 
-                            believe that the best way to ensure a child's future success is to nurture and equip the parents 
-                            first.
+                        While my years as a nanny have been dedicated to nurturing the individual needs of children,
+                        my transition into postpartum care has a new, vital objective. At Olive Branch Baby Care, I
+                        believe that the best way to ensure a child's future success is to nurture and equip the parents
+                        first.
 
-                            By providing you with evidence-based solutions, a listening ear, and practical support during 
-                            the fourth trimester, I help create a stable, peaceful environment. My goal is to empower you 
-                            with the confidence and tools you need today, so your children can thrive in the years to come.
-                        </p>
-                    </div>
+                        By providing you with evidence-based solutions, a listening ear, and practical support during
+                        the fourth trimester, I help create a stable, peaceful environment. My goal is to empower you
+                        with the confidence and tools you need today, so your children can thrive in the years to come.
+                    </p>
+                </div>
 
-                    <div class="image-placeholder"></div>
+                <div class="image-placeholder"></div>
 
-                </section>
+            </section>
 
-                
+
             <section id="projects" class="reveal">
                 <div class="grid">
                     <article class="card">
@@ -60,12 +64,12 @@
                             <li>All vaccinations up to date</li>
                         </ul>
                         <!-- <p class="tags"> [Place holder text] </p> -->
-                        
+
                     </article>
 
                     <article class="card">
                         <h3> [Place holder text] </h3>
-                        <p> [Place holder text] 
+                        <p> [Place holder text]
                         </p>
 
                     </article>
@@ -77,34 +81,36 @@
                         <p class="tags"> [Place holder text] </p>
 
                     </article> -->
-                    </div>
-                </section>
-        </main>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        <footer>
-            © 2026 All Rights Reserved by Olive Branch Baby Care
-        </footer>
+    <footer>
+        © 2026 All Rights Reserved by Olive Branch Baby Care
+    </footer>
 
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-                function revealOnScroll() {
-                    const reveals = document.querySelectorAll('.reveal');
-                    const windowHeight = window.innerHeight;
+            function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal');
+                const windowHeight = window.innerHeight;
 
-                    reveals.forEach(el => {
-                        const elementTop = el.getBoundingClientRect().top;
+                reveals.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
 
-                        if (elementTop < windowHeight - 100) {
+                    if (elementTop < windowHeight - 100) {
                         el.classList.add('active');
-                        }
-                    });
-                }
+                    }
+                });
+            }
 
-                window.addEventListener('scroll', revealOnScroll);
-                revealOnScroll();
-            });
-        </script>
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
 
-    </body>
+</body>
+
 </html>
