@@ -9,6 +9,12 @@ body {
   overflow-x: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 img,
 video {
   max-width: 100%;
@@ -464,6 +470,10 @@ button:active {
     grid-template-columns: 1fr;
   }
 
+  .wrap {
+    padding: 0 10px;
+  }
+
   input,
   textarea,
   button {
@@ -495,6 +505,12 @@ button:active {
     width: 150px;
     height: 150px;
     opacity: 0.08;
+  }
+
+  section-panel {
+    margin: 20px 10px;
+    padding: 20px 16px;
+    border-radius: 24px;
   }
 
   body::before {
