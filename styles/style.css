@@ -9,6 +9,12 @@ body {
   overflow-x: hidden;
 }
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
 nav {
   position: fixed;
   top: 8px;
@@ -466,7 +472,7 @@ button:active {
   }
 
   main {
-    margin-top: 100px;
+    margin-top: 80px;
   }
 
   nav {
@@ -479,11 +485,34 @@ button:active {
     z-index: 1000;
   }
 
+  .section-panel::before,
+  .section-panel::after {
+    display: none;
+  }
+
   body::before,
   body::after {
-    width: 200px;
-    height: 200px;
-    opacity: 0.15;
+    width: 150px;
+    height: 150px;
+    opacity: 0.08;
+  }
+
+  body::before {
+    top: 0;
+    left: -40px;
+  }
+
+  body::after {
+    top: 0;
+    right: -40px;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .split.reverse {
+    direction: ltr;
   }
 }
 
