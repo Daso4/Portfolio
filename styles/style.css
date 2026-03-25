@@ -455,6 +455,10 @@ button:active {
 
 /* ==== Mobile tweaks ==== */
 @media (max-width: 480px) {
+  p, h1, h2, h3 {
+    word-wrap: break-word;
+  }
+  
   .form-row {
     flex-direction: column;
     gap: 12px;
@@ -493,6 +497,9 @@ button:active {
     text-align: center;
     background: #c4d5be;
     z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .section-panel::before,
@@ -507,10 +514,11 @@ button:active {
     opacity: 0.08;
   }
 
-  section-panel {
-    margin: 20px 10px;
+  .section-panel {
+    margin: 20px auto;
     padding: 20px 16px;
     border-radius: 24px;
+    width: calc(100% - 20px);
   }
 
   body::before {
@@ -524,11 +532,28 @@ button:active {
   }
 
   .split {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .split.reverse {
-    direction: ltr;
+  .split > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .split img {
+    order: 2;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .split > div {
+    order: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
   }
 }
 
